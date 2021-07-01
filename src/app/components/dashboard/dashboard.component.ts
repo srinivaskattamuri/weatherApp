@@ -3,6 +3,7 @@ import { WeatherServiceService } from '../../service/weather-service.service';
 import { Observable, forkJoin } from 'rxjs';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -37,5 +38,7 @@ export class DashboardComponent implements OnInit {
 
      })
   }
+
+
 
 }

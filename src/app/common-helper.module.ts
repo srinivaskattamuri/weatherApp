@@ -5,26 +5,26 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { FahrenheitPipe } from './pipes/fahrenheit.pipe';
 
 //This Module will bebused for all Custom pipes material modules  and etc
 
 const pipes:any = [
-
+  FahrenheitPipe
 ]
 
 const MAT_MODULES = [
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule
+
+    MatCardModule,
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [...pipes],
   imports: [
     CommonModule,
-    ...MAT_MODULES
+    ...MAT_MODULES,
+
   ],
   exports:[...MAT_MODULES, ...pipes]
 })

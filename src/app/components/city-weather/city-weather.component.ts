@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-city-weather',
@@ -11,12 +12,13 @@ export class CityWeatherComponent implements OnInit {
   weatherCityData:Array<any> = [];
   currentNavData:any = [];
   nextFiveDaysData:Array<any> = [];
-  constructor(private route:Router) {
+  constructor(private route:Router,
+    private _location: Location) {
     this.currentNavData = this.route.getCurrentNavigation();
   }
 
   ngOnInit(): void {
-    if(this.currentNavData.extras.state.data){
+    if(this.currentNavData.extras.state && this.currentNavData.extras.state.data){
       this.weatherCityData = this.currentNavData.extras.state.data.list;
       this.currentCityname = this.currentNavData.extras.state.data.city.name
     }
@@ -25,4 +27,7 @@ export class CityWeatherComponent implements OnInit {
      }
   }
 
+  backClicked() {
+    this._location.back();
+  }
 }

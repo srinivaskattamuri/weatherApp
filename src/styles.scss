@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import './params.scss';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.box {
+  width: 30%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.mat-card {
+  background:$cardColor;
+  margin-bottom: 20px
+}
+.mat-card-header{
+   display: inline !important;
+}
+
