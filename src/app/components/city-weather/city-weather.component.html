@@ -1,4 +1,4 @@
-<a (click)="backClicked()">Back</a>
+<button mat-button color="primary" (click)="backClicked()">Back</button>
 <div *ngFor="let data of nextFiveDaysData" class="box">
   <mat-card class="mat-elevation-z5" >
     <mat-card-header>
@@ -8,8 +8,8 @@
     <mat-card-content>
     <div>
         <span>Temperature : {{data?.main?.temp}} C / {{data?.main?.temp | fahrenheit}} F</span> <br>
-        <span>Sea Level : {{data?.main?.sea_level }}   </span> <br>
-  </div>
+        <span>Sea Level : {{data?.main?.sea_level }} hpA   </span> <br>
+   </div>
     </mat-card-content>
     <mat-card-actions>
     </mat-card-actions>
