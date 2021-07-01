@@ -1,0 +1,18 @@
+<div *ngFor="let data of weatherData" style="display: flex">
+<mat-card class="mat-elevation-z5" (click)="showWeatherDetails(data)">
+  <mat-card-header>
+    <mat-card-title>{{data?.name}}'s Weather</mat-card-title>
+    <mat-card-subtitle>{{today | date:'mediumDate'}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+  <div>
+      <span>Temperature : {{data?.main?.temp}}</span> <br>
+      <span>Sunrise : {{((data?.sys?.sunrise + data?.timezone) * 1000) | date:'h:mm a' : 'UTC' }}   </span> <br>
+      <span>Sunset : {{((data?.sys?.sunset + data?.timezone) * 1000) | date:'h:mm a' : 'UTC' }} </span> <br>
+</div>
+  </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
+</mat-card>
+</div>
+
