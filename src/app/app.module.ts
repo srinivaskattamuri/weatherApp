@@ -10,7 +10,6 @@ import { CommonHelperModule } from './common-helper.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

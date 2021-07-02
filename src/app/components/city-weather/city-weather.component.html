@@ -1,9 +1,13 @@
-<button mat-button color="primary" (click)="backClicked()">Back</button>
+<div>
+   <h1> {{currentCityname}}'s Weather</h1>
+  <button mat-button color="primary" (click)="backClicked()">Back</button>
+</div>
+
 <div *ngFor="let data of nextFiveDaysData" class="box">
   <mat-card class="mat-elevation-z5" >
     <mat-card-header>
-      <mat-card-title>{{currentCityname}}'s Weather</mat-card-title>
-      <mat-card-subtitle>{{data?.dt_txt | date:'mediumDate'}}</mat-card-subtitle>
+      <mat-card-title>{{data?.dt_txt | date:'mediumDate'}}</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
     <div>
