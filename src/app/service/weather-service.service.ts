@@ -12,7 +12,7 @@ export class WeatherServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getWeatherForCities(location:number) {
+  getWeatherForCities(location:number):any {
     return this.http.get(`${environment.apiUrl}/weather?id=${location}&appid=${apiKey}&units=metric`)
   }
 

@@ -18,7 +18,7 @@ export class CityWeatherComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.currentNavData.extras.state && this.currentNavData.extras.state.data){
+    if(this.currentNavData && this.currentNavData.extras && this.currentNavData.extras.state && this.currentNavData.extras.state.data){
       this.weatherCityData = this.currentNavData.extras.state.data.list;
       this.currentCityname = this.currentNavData.extras.state.data.city.name
     }

@@ -17,6 +17,8 @@ const pipes:any = [
 const MAT_MODULES = [
 
     MatCardModule,
+    MatButtonModule,
+    MatToolbarModule
 ]
 
 @NgModule({

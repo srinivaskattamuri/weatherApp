@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(protected weatherSvc:WeatherServiceService,
+  constructor(public weatherSvc:WeatherServiceService,
     private router: Router
   ) { }
   weatherData:Array<any> = [];
@@ -35,10 +35,7 @@ export class DashboardComponent implements OnInit {
          if( res.list && res.list.length){
            this.router.navigate(['/cityWeather'],{state: {data: res}});
         }
-
      })
   }
-
-
 
 }
