@@ -3,10 +3,13 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+var sslRedirect = require('heroku-ssl-redirect');
 
 // Serve only the static files form the dist directory
 // Replace the '/dist/<to_your_project_name>'
+app.use(sslRedirect());
 app.use(express.static(__dirname + '/dist/weatherApp'));
+
 
 app.get('*', function(req,res) {
   // Replace the '/dist/weatherApp/index.html'
